@@ -1,0 +1,13 @@
+"F:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armproc.dll" 
+
+"F:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armjlink2.dll" 
+
+"D:\桌面文件\测试专用库\LQ_KV58F24第3版20180424\LQ_KV58F24第3版\LQ_KV58F24第3版20180424\release\gpio_example.out" 
+
+--plugin "F:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armbat.dll" 
+
+--device_macro "F:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\config\debugger\NXP\KV5x.dmac" 
+
+
+
+

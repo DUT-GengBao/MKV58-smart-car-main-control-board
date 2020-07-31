@@ -1,0 +1,684 @@
+###############################################################################
+#
+# IAR ELF Linker V8.32.2.178/W32 for ARM                  02/May/2019  15:59:12
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  D:\SmartCar\MCU2\debug\demoLQ_KV58F24.out
+#    Map file     =  D:\SmartCar\MCU2\debug\list\demoLQ_KV58F24.map
+#    Command line =  
+#        -f C:\Users\geng1\AppData\Local\Temp\EW4E33.tmp
+#        (D:\SmartCar\MCU2\debug\obj\APPmain.o
+#        D:\SmartCar\MCU2\debug\obj\cJSON.o
+#        D:\SmartCar\MCU2\debug\obj\cJSON_Utils.o
+#        D:\SmartCar\MCU2\debug\obj\Control.o
+#        D:\SmartCar\MCU2\debug\obj\define.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_clock_manager.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_clock_manager_common.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_clock_MKV58F24.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_debug_console.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_dmamux_hal.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_hsadc_common.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_hsadc_driver.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_hsadc_hal.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_hwtimer.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_hwtimer_pit.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_hwtimer_systick.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_hwtimer_systick_irq.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_interrupt_manager.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_interrupt_manager_common.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_interrupt_manager_irq.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_llwu_hal.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_mcg_hal.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_mcg_hal_modes.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_misc_utilities.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_mscm_hal.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_osc_hal.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_port_hal.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_power_manager.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_rcm_hal.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_sim_hal_MKV58F24.o
+#        D:\SmartCar\MCU2\debug\obj\fsl_smc_hal.o
+#        D:\SmartCar\MCU2\debug\obj\LCD.o D:\SmartCar\MCU2\debug\obj\LPTMR.o
+#        D:\SmartCar\MCU2\debug\obj\LQ_KEY.o
+#        D:\SmartCar\MCU2\debug\obj\LQ_LED.o
+#        D:\SmartCar\MCU2\debug\obj\LQ_PLL.o D:\SmartCar\MCU2\debug\obj\LQADC.o
+#        D:\SmartCar\MCU2\debug\obj\LQDMA.o D:\SmartCar\MCU2\debug\obj\LQFTM.o
+#        D:\SmartCar\MCU2\debug\obj\LQGPIO.o D:\SmartCar\MCU2\debug\obj\LQI2C.o
+#        D:\SmartCar\MCU2\debug\obj\LQMT9V034.o
+#        D:\SmartCar\MCU2\debug\obj\LQPIT.o D:\SmartCar\MCU2\debug\obj\LQUART.o
+#        D:\SmartCar\MCU2\debug\obj\LQWDOG.o
+#        D:\SmartCar\MCU2\debug\obj\pin_mux.o
+#        D:\SmartCar\MCU2\debug\obj\print_scan.o
+#        D:\SmartCar\MCU2\debug\obj\SPI.o D:\SmartCar\MCU2\debug\obj\startup.o
+#        D:\SmartCar\MCU2\debug\obj\startup_MKV58F24.o
+#        D:\SmartCar\MCU2\debug\obj\system_MKV58F24.o
+#        D:\SmartCar\MCU2\debug\obj\u_iic.o
+#        D:\SmartCar\MCU2\debug\obj\usartcontrol.o --redirect
+#        _Printf=_PrintfSmallNoMb --redirect _Scanf=_ScanfSmallNoMb
+#        --no_out_extension -o D:\SmartCar\MCU2\debug\demoLQ_KV58F24.out --map
+#        D:\SmartCar\MCU2\debug\list\demoLQ_KV58F24.map --config
+#        D:\SmartCar\MCU2\LQuser\devices\linker\MKV58F1M0xxx24_flash.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__Heap_Handler  = DLMalloc
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The advanced heap was selected because the application calls memory
+allocation functions outside of system library functions, and there
+are calls to deallocation functions in the application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x1000'0000 { ro section .intvec };
+"P1":  place in [from 0x1000'0400 to 0x1000'040f] { section FlashConfig };
+"P2":  place in [from 0x1000'0000 to 0x1000'03ff] |
+                [from 0x1000'0410 to 0x100f'ffff] { ro };
+define block RW { rw };
+"P3":  place in [from 0x2000'0000 to 0x2001'efff] { block RW };
+define block ZI { zi };
+"P4":  place in [from 0x2000'0000 to 0x2001'efff] { block ZI };
+define block HEAP with size = 1K, alignment = 8 { };
+"P5":  place in [from 0x2000'0000 to 0x2001'efff] { last block HEAP };
+define block CSTACK with size = 4K, alignment = 8 { };
+"P6":  place in [from 0x2001'f000 to 0x2001'ffff] { block CSTACK };
+initialize by copy { rw, section .textrw };
+
+No sections matched the following patterns:
+
+  section m_interrupts_ram  in "P7"
+  section m_itcm            in "P8"
+  section m_ocram           in "P9"
+
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                       0x400
+  .intvec            ro code  0x1000'0000   0x400  startup_MKV58F24.o [1]
+                            - 0x1000'0400   0x400
+
+"P1":                                        0x10
+  FlashConfig        ro code  0x1000'0400    0x10  startup_MKV58F24.o [1]
+                            - 0x1000'0410    0x10
+
+"P2":                                      0x59f0
+  .text              ro code  0x1000'0410  0x1d24  dlmalloc.o [2]
+  .text              ro code  0x1000'2134     0x6  abort.o [2]
+  .text              ro code  0x1000'213a    0x3a  zero_init3.o [4]
+  .text              ro code  0x1000'2174    0x2c  xgetmemchunk.o [2]
+  .text              ro code  0x1000'21a0    0xa6  ABImemcpy.o [4]
+  .text              ro code  0x1000'2246    0x1e  xsscin.o [2]
+  .text              ro code  0x1000'2264    0x14  exit.o [5]
+  .text              ro code  0x1000'2278   0x91c  cJSON.o [1]
+  .text              ro code  0x1000'2b94    0x36  strlen.o [4]
+  .text              ro code  0x1000'2bca     0xa  xsprout.o [2]
+  .text              ro code  0x1000'2bd4    0x66  ABImemset.o [4]
+  .text              ro code  0x1000'2c3a     0x2  startup_MKV58F24.o [1]
+  .text              ro code  0x1000'2c3c   0x1a2  DblMul.o [3]
+  .text              ro code  0x1000'2dde     0x2  startup_MKV58F24.o [1]
+  .text              ro code  0x1000'2de0    0x20  DblCmpEq.o [3]
+  .text              ro code  0x1000'2e00    0x40  sprintf.o [2]
+  .text              ro code  0x1000'2e40    0x28  sscanf.o [2]
+  .text              ro code  0x1000'2e68    0x18  strcpy.o [4]
+  .text              ro code  0x1000'2e80   0x4d0  xprintfsmall_nomb.o [2]
+  .text              ro code  0x1000'3350   0x594  xscanfsmall_nomb.o [2]
+  .text              ro code  0x1000'38e4    0x16  strchr.o [4]
+  .text              ro code  0x1000'38fa     0x2  startup_MKV58F24.o [1]
+  .text              ro code  0x1000'38fc    0x40  xfail_s.o [2]
+  .text              ro code  0x1000'393c    0x58  memchr.o [4]
+  .text              ro code  0x1000'3994    0x82  iar_Stolx.o [2]
+  .text              ro code  0x1000'3a16     0x2  startup_MKV58F24.o [1]
+  .text              ro code  0x1000'3a18   0x14a  iar_Stoulx.o [2]
+  .text              ro code  0x1000'3b62     0x2  startup_MKV58F24.o [1]
+  .text              ro code  0x1000'3b64   0x4c4  fsl_mcg_hal_modes.o [1]
+  .text              ro code  0x1000'4028   0x338  fsl_mcg_hal.o [1]
+  .text              ro code  0x1000'4360   0x34a  LQUART.o [1]
+  .text              ro code  0x1000'46aa     0x2  startup_MKV58F24.o [1]
+  .text              ro code  0x1000'46ac   0x344  LQFTM.o [1]
+  .text              ro code  0x1000'49f0   0x320  fsl_clock_manager.o [1]
+  .text              ro code  0x1000'4d10    0x24  ABIassert.o [5]
+  .text              ro code  0x1000'4d34     0xc  fsl_osc_hal.o [1]
+  .text              ro code  0x1000'4d40   0x2bc  LQ_KEY.o [1]
+  .text              ro code  0x1000'4ffc   0x10c  LQGPIO.o [1]
+  .text              ro code  0x1000'5108    0x58  LPTMR.o [1]
+  .text              ro code  0x1000'5160   0x18c  LQ_PLL.o [1]
+  .text              ro code  0x1000'52ec   0x17c  fsl_smc_hal.o [1]
+  .text              ro code  0x1000'5468    0xc8  fsl_clock_MKV58F24.o [1]
+  .text              ro code  0x1000'5530    0x36  fsl_sim_hal_MKV58F24.o [1]
+  .text              ro code  0x1000'5566     0x2  startup_MKV58F24.o [1]
+  .text              ro code  0x1000'5568   0x124  APPmain.o [1]
+  .text              ro code  0x1000'568c    0xd8  Control.o [1]
+  .text              ro code  0x1000'5764    0xf8  LQPIT.o [1]
+  .text              ro code  0x1000'585c    0x96  usartcontrol.o [1]
+  .text              ro code  0x1000'58f2     0x8  heaptramp0.o [2]
+  .text              ro code  0x1000'58fa     0x2  startup_MKV58F24.o [1]
+  .text              ro code  0x1000'58fc     0x6  ABImemclr.o [4]
+  .text              ro code  0x1000'5904    0xc0  system_MKV58F24.o [1]
+  .rodata            const    0x1000'59c4    0x50  iar_Stoulx.o [2]
+  .rodata            const    0x1000'5a14    0x4c  fsl_clock_MKV58F24.o [1]
+  .rodata            const    0x1000'5a60    0x48  fsl_clock_manager.o [1]
+  .text              ro code  0x1000'5aa8    0x44  fsl_hwtimer_systick.o [1]
+  .rodata            const    0x1000'5aec    0x40  fsl_clock_manager.o [1]
+  .text              ro code  0x1000'5b2c    0x3c  startup.o [1]
+  Initializer bytes  const    0x1000'5b68    0x34  <for RW-1>
+  .text              ro code  0x1000'5b9c    0x2c  copy_init3.o [4]
+  .text              ro code  0x1000'5bc8    0x28  data_init.o [4]
+  .rodata            const    0x1000'5bf0    0x24  xscanfsmall_nomb.o [2]
+  .text              ro code  0x1000'5c14    0x22  fpinit_M.o [3]
+  .iar.init_table    const    0x1000'5c38    0x24  - Linker created -
+  .text              ro code  0x1000'5c5c    0x1e  cmain.o [4]
+  .text              ro code  0x1000'5c7a     0x4  low_level_init.o [2]
+  .text              ro code  0x1000'5c7e     0x4  exit.o [2]
+  .text              ro code  0x1000'5c84     0xa  cexit.o [4]
+  .text              ro code  0x1000'5c90    0x1c  startup_MKV58F24.o [1]
+  .rodata            const    0x1000'5cac    0x18  LQ_PLL.o [1]
+  .rodata            const    0x1000'5cc4    0x18  LQ_PLL.o [1]
+  .rodata            const    0x1000'5cdc    0x18  LQ_PLL.o [1]
+  .rodata            const    0x1000'5cf4    0x18  LQ_PLL.o [1]
+  .rodata            const    0x1000'5d0c    0x18  LQ_PLL.o [1]
+  .rodata            const    0x1000'5d24    0x18  LQ_PLL.o [1]
+  .rodata            const    0x1000'5d3c    0x14  fsl_clock_manager.o [1]
+  .rodata            const    0x1000'5d50    0x10  fsl_clock_manager.o [1]
+  .rodata            const    0x1000'5d60    0x10  fsl_mcg_hal.o [1]
+  .rodata            const    0x1000'5d70    0x10  LQ_PLL.o [1]
+  .text              ro code  0x1000'5d80    0x10  fsl_hwtimer_systick_irq.o [1]
+  .rodata            const    0x1000'5d90     0xc  fsl_clock_MKV58F24.o [1]
+  .text              ro code  0x1000'5d9c     0xc  cstartup_M.o [4]
+  .rodata            const    0x1000'5da8     0x8  cJSON.o [1]
+  .rodata            const    0x1000'5db0     0x8  cJSON.o [1]
+  .rodata            const    0x1000'5db8     0x8  cJSON.o [1]
+  .rodata            const    0x1000'5dc0     0x8  cJSON.o [1]
+  .rodata            const    0x1000'5dc8     0x8  cJSON.o [1]
+  .rodata            const    0x1000'5dd0     0x8  cJSON.o [1]
+  .rodata            const    0x1000'5dd8     0x8  LQ_PLL.o [1]
+  .rodata            const    0x1000'5de0     0x4  APPmain.o [1]
+  .rodata            const    0x1000'5de4     0x4  APPmain.o [1]
+  .rodata            const    0x1000'5de8     0x4  APPmain.o [1]
+  .rodata            const    0x1000'5dec     0x4  cJSON.o [1]
+  .rodata            const    0x1000'5df0     0x4  cJSON.o [1]
+  .rodata            const    0x1000'5df4     0x4  cJSON.o [1]
+  .rodata            const    0x1000'5df8     0x4  fsl_clock_manager_common.o [1]
+  .text              ro code  0x1000'5dfc     0x4  startup_MKV58F24.o [1]
+  .rodata            const    0x1000'5e00     0x0  zero_init3.o [4]
+  .rodata            const    0x1000'5e00     0x0  copy_init3.o [4]
+                            - 0x1000'5e00  0x59f0
+
+"P3-P4", part 1 of 2:                        0x34
+  RW                          0x2000'0000    0x34  <Block>
+    RW-1                      0x2000'0000    0x34  <Init block>
+      .data          inited   0x2000'0000     0xc  cJSON.o [1]
+      .data          inited   0x2000'000c     0x4  Control.o [1]
+      .data          inited   0x2000'0010     0x4  fsl_mcg_hal.o [1]
+      .data          inited   0x2000'0014     0x4  fsl_mcg_hal.o [1]
+      .data          inited   0x2000'0018    0x18  LQUART.o [1]
+      .data          inited   0x2000'0030     0x4  system_MKV58F24.o [1]
+                            - 0x2000'0034    0x34
+
+"P3-P4", part 2 of 2:                       0x258
+  ZI                          0x2000'0034   0x258  <Block>
+    .bss             zero     0x2000'0034     0x4  APPmain.o [1]
+    .bss             zero     0x2000'0038     0x4  Control.o [1]
+    .bss             zero     0x2000'003c     0x4  Control.o [1]
+    .bss             zero     0x2000'0040    0x40  Control.o [1]
+    .bss             zero     0x2000'0080     0x4  fsl_hwtimer_systick.o [1]
+    .bss             zero     0x2000'0084     0x4  fsl_mcg_hal.o [1]
+    .bss             zero     0x2000'0088     0x4  LQ_PLL.o [1]
+    .bss             zero     0x2000'008c     0x4  LQ_PLL.o [1]
+    .bss             zero     0x2000'0090    0x18  dlmalloc.o [2]
+    .bss             zero     0x2000'00a8   0x1d8  dlmalloc.o [2]
+    .bss             zero     0x2000'0280     0x4  xgetmemchunk.o [2]
+    .bss             zero     0x2000'0284     0x4  xfail_s.o [2]
+    .bss             zero     0x2000'0288     0x1  Control.o [1]
+                            - 0x2000'028c   0x258
+
+"P5":                                       0x400
+  HEAP                        0x2000'0290   0x400  <Block>
+    HEAP             uninit   0x2000'0290   0x400  <Block tail>
+                            - 0x2000'0690   0x400
+
+"P6":                                      0x1000
+  CSTACK                      0x2001'f000  0x1000  <Block>
+    CSTACK           uninit   0x2001'f000  0x1000  <Block tail>
+                            - 0x2002'0000  0x1000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+  0x1000'5e00  0x100f'ffff  0xf'a200
+  0x2000'028c  0x2000'028f       0x4
+  0x2000'0690  0x2001'efff  0x1'e970
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x255:
+          0x2000'0034  0x255
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x34:
+          0x1000'5b68   0x34
+    1 destination range, total size 0x34:
+          0x2000'0000   0x34
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                      ro code  ro data  rw data
+    ------                      -------  -------  -------
+command line/config:
+    -----------------------------------------------------
+    Total:
+
+D:\SmartCar\MCU2\debug\obj: [1]
+    APPmain.o                       292       12        4
+    Control.o                       216        4       77
+    LPTMR.o                          88
+    LQFTM.o                         836
+    LQGPIO.o                        268
+    LQPIT.o                         248
+    LQUART.o                        842       24       24
+    LQ_KEY.o                        700
+    LQ_PLL.o                        396      168        8
+    cJSON.o                       2 332       72       12
+    fsl_clock_MKV58F24.o            200       88
+    fsl_clock_manager.o             800      172
+    fsl_clock_manager_common.o                 4
+    fsl_hwtimer_systick.o            68                 4
+    fsl_hwtimer_systick_irq.o        16
+    fsl_mcg_hal.o                   824       24       12
+    fsl_mcg_hal_modes.o           1 220
+    fsl_osc_hal.o                    12
+    fsl_sim_hal_MKV58F24.o           54
+    fsl_smc_hal.o                   380
+    startup.o                        60
+    startup_MKV58F24.o            1 088
+    system_MKV58F24.o               192        4        4
+    usartcontrol.o                  150
+    -----------------------------------------------------
+    Total:                       11 282      572      145
+
+dl7M_tln.a: [2]
+    abort.o                           6
+    dlmalloc.o                    7 460               496
+    exit.o                            4
+    heaptramp0.o                      8
+    iar_Stolx.o                     130
+    iar_Stoulx.o                    330       80
+    low_level_init.o                  4
+    sprintf.o                        64
+    sscanf.o                         40
+    xfail_s.o                        64                 4
+    xgetmemchunk.o                   44                 4
+    xprintfsmall_nomb.o           1 232
+    xscanfsmall_nomb.o            1 428       36
+    xsprout.o                        10
+    xsscin.o                         30
+    -----------------------------------------------------
+    Total:                       10 854      116      504
+
+m7M_tls.a: [3]
+    DblCmpEq.o                       32
+    DblMul.o                        418
+    fpinit_M.o                       34
+    -----------------------------------------------------
+    Total:                          484
+
+rt7M_tl.a: [4]
+    ABImemclr.o                       6
+    ABImemcpy.o                     166
+    ABImemset.o                     102
+    cexit.o                          10
+    cmain.o                          30
+    copy_init3.o                     44
+    cstartup_M.o                     12
+    data_init.o                      40
+    memchr.o                         88
+    strchr.o                         22
+    strcpy.o                         24
+    strlen.o                         54
+    zero_init3.o                     58
+    -----------------------------------------------------
+    Total:                          656
+
+shb_l.a: [5]
+    ABIassert.o                      36
+    exit.o                           20
+    -----------------------------------------------------
+    Total:                           56
+
+    Gaps                              6        2
+    Linker created                            36    5 120
+---------------------------------------------------------
+    Grand Total:                 23 338      726    5 769
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base   0x1000'5c38          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x1000'5c5c          --   Gb  - Linker created -
+?main                   0x1000'5c5d         Code  Gb  cmain.o [4]
+BOARD_InitOsc0          0x1000'528b   0x18  Code  Gb  LQ_PLL.o [1]
+CLOCK_HAL_EnablePll0InFllMode
+                        0x1000'4275   0x34  Code  Gb  fsl_mcg_hal.o [1]
+CLOCK_HAL_GetClkOutStat
+                        0x1000'49fd    0xe  Code  Lc  fsl_clock_manager.o [1]
+CLOCK_HAL_GetClkOutStat
+                        0x1000'4029    0xe  Code  Lc  fsl_mcg_hal.o [1]
+CLOCK_HAL_GetClkOutStat
+                        0x1000'3b65    0xe  Code  Lc  fsl_mcg_hal_modes.o [1]
+CLOCK_HAL_GetFllClk     0x1000'4171   0x40  Code  Gb  fsl_mcg_hal.o [1]
+CLOCK_HAL_GetFllRefClk  0x1000'40ef   0x42  Code  Gb  fsl_mcg_hal.o [1]
+CLOCK_HAL_GetFllSrc     0x1000'3b73    0xc  Code  Lc  fsl_mcg_hal_modes.o [1]
+CLOCK_HAL_GetInternalRefClk
+                        0x1000'42a9   0x36  Code  Gb  fsl_mcg_hal.o [1]
+CLOCK_HAL_GetInternalRefClkMode
+                        0x1000'4a27    0xc  Code  Lc  fsl_clock_manager.o [1]
+CLOCK_HAL_GetInternalRefClkMode
+                        0x1000'4041    0xc  Code  Lc  fsl_mcg_hal.o [1]
+CLOCK_HAL_GetInternalRefClkMode
+                        0x1000'3b7f    0xc  Code  Lc  fsl_mcg_hal_modes.o [1]
+CLOCK_HAL_GetMcgExternalClkFreq
+                        0x1000'40b3    0x8  Code  Lc  fsl_mcg_hal.o [1]
+CLOCK_HAL_GetMcgMode    0x1000'3bdf   0xa6  Code  Gb  fsl_mcg_hal_modes.o [1]
+CLOCK_HAL_GetOutClk     0x1000'42df   0x3e  Code  Gb  fsl_mcg_hal.o [1]
+CLOCK_HAL_GetOutDiv1    0x1000'5469   0x12  Code  Lc  fsl_clock_MKV58F24.o [1]
+CLOCK_HAL_GetPll0Clk    0x1000'4229   0x4c  Code  Gb  fsl_mcg_hal.o [1]
+CLOCK_HAL_GetPll0RefFreq
+                        0x1000'4221    0x8  Code  Gb  fsl_mcg_hal.o [1]
+CLOCK_HAL_IsOsc0Stable  0x1000'4a3f   0x18  Code  Lc  fsl_clock_manager.o [1]
+CLOCK_HAL_IsOsc0Stable  0x1000'407d   0x18  Code  Lc  fsl_mcg_hal.o [1]
+CLOCK_HAL_IsOsc0Stable  0x1000'3bc7   0x18  Code  Lc  fsl_mcg_hal_modes.o [1]
+CLOCK_HAL_IsPll0Locked  0x1000'404d   0x18  Code  Lc  fsl_mcg_hal.o [1]
+CLOCK_HAL_IsPll0Locked  0x1000'3b97   0x18  Code  Lc  fsl_mcg_hal_modes.o [1]
+CLOCK_HAL_IsPllSelected
+                        0x1000'4065   0x18  Code  Lc  fsl_mcg_hal.o [1]
+CLOCK_HAL_IsPllSelected
+                        0x1000'3baf   0x18  Code  Lc  fsl_mcg_hal_modes.o [1]
+CLOCK_HAL_PrepareOsc    0x1000'4095   0x1e  Code  Gb  fsl_mcg_hal.o [1]
+CLOCK_HAL_SetBlpeMode   0x1000'3f61   0x16  Code  Gb  fsl_mcg_hal_modes.o [1]
+CLOCK_HAL_SetBlpiMode   0x1000'3f27   0x3a  Code  Gb  fsl_mcg_hal_modes.o [1]
+CLOCK_HAL_SetClkOutSrc  0x1000'49f1    0xc  Code  Lc  fsl_clock_manager.o [1]
+CLOCK_HAL_SetExternalRefClock32kSrc
+                        0x1000'547b    0xe  Code  Lc  fsl_clock_MKV58F24.o [1]
+CLOCK_HAL_SetFbeMode    0x1000'3e65   0xc2  Code  Gb  fsl_mcg_hal_modes.o [1]
+CLOCK_HAL_SetFbiMode    0x1000'3dad   0xb8  Code  Gb  fsl_mcg_hal_modes.o [1]
+CLOCK_HAL_SetFeeMode    0x1000'3d0b   0xa2  Code  Gb  fsl_mcg_hal_modes.o [1]
+CLOCK_HAL_SetFeiMode    0x1000'3c85   0x86  Code  Gb  fsl_mcg_hal_modes.o [1]
+CLOCK_HAL_SetInternalRefClkEnableCmd
+                        0x1000'4a0b    0xa  Code  Lc  fsl_clock_manager.o [1]
+CLOCK_HAL_SetInternalRefClkEnableInStopCmd
+                        0x1000'4a15    0x8  Code  Lc  fsl_clock_manager.o [1]
+CLOCK_HAL_SetInternalRefClkMode
+                        0x1000'4a1d    0xa  Code  Lc  fsl_clock_manager.o [1]
+CLOCK_HAL_SetInternalRefClkMode
+                        0x1000'4037    0xa  Code  Lc  fsl_mcg_hal.o [1]
+CLOCK_HAL_SetOsc0Mode   0x1000'431d   0x26  Code  Gb  fsl_mcg_hal.o [1]
+CLOCK_HAL_SetOutDiv     0x1000'5531   0x36  Code  Gb  fsl_sim_hal_MKV58F24.o [1]
+CLOCK_HAL_SetPbeMode    0x1000'3f77   0x8a  Code  Gb  fsl_mcg_hal_modes.o [1]
+CLOCK_HAL_SetPeeMode    0x1000'4001   0x1a  Code  Gb  fsl_mcg_hal_modes.o [1]
+CLOCK_HAL_SetPll0EnableCmd
+                        0x1000'4a33    0xc  Code  Lc  fsl_clock_manager.o [1]
+CLOCK_HAL_SetPll0EnableCmd
+                        0x1000'3b8b    0xc  Code  Lc  fsl_mcg_hal_modes.o [1]
+CLOCK_HAL_TestFllExternalRefFreq
+                        0x1000'40bb   0x34  Code  Gb  fsl_mcg_hal.o [1]
+CLOCK_HAL_TestFllFreq   0x1000'4131   0x40  Code  Gb  fsl_mcg_hal.o [1]
+CLOCK_HAL_TestFllFreq::fllFactorTable
+                        0x1000'5d60   0x10  Data  Lc  fsl_mcg_hal.o [1]
+CLOCK_HAL_UpdateFastClkInternalRefDiv
+                        0x1000'41b1   0x70  Code  Gb  fsl_mcg_hal.o [1]
+CLOCK_SYS_FllStableDelay
+                        0x1000'4a79   0x12  Code  Lc  fsl_clock_manager.o [1]
+CLOCK_SYS_GetCoreClockFreq
+                        0x1000'54fd   0x18  Code  Gb  fsl_clock_MKV58F24.o [1]
+CLOCK_SYS_McgModeToIdx  0x1000'4a8b   0x34  Code  Lc  fsl_clock_manager.o [1]
+CLOCK_SYS_OscInit       0x1000'4c25   0x9a  Code  Gb  fsl_clock_manager.o [1]
+CLOCK_SYS_SetConfiguration
+                        0x1000'54ab   0x52  Code  Gb  fsl_clock_MKV58F24.o [1]
+CLOCK_SYS_SetMcgMode    0x1000'4abf  0x166  Code  Gb  fsl_clock_manager.o [1]
+CLOCK_SYS_SetOscerConfigration
+                        0x1000'4cbf   0x28  Code  Gb  fsl_clock_manager.o [1]
+CLOCK_SYS_SetSimConfigration
+                        0x1000'5489   0x22  Code  Gb  fsl_clock_MKV58F24.o [1]
+CSTACK$$Base            0x2001'f000          --   Gb  - Linker created -
+CSTACK$$Limit           0x2002'0000          --   Gb  - Linker created -
+Dir                     0x2000'000c    0x4  Data  Gb  Control.o [1]
+EXTI_Init               0x1000'5095   0x54  Code  Gb  LQGPIO.o [1]
+FTM_AB_Get              0x1000'496d    0xc  Code  Gb  LQFTM.o [1]
+FTM_AB_Init             0x1000'4899   0xd4  Code  Gb  LQFTM.o [1]
+GPIO_Init               0x1000'5011   0x84  Code  Gb  LQGPIO.o [1]
+HEAP$$Base              0x2000'0290          --   Gb  - Linker created -
+HEAP$$Limit             0x2000'0690          --   Gb  - Linker created -
+HWTIMER_SYS_SystickIsrAction
+                        0x1000'5aa9   0x3a  Code  Gb  fsl_hwtimer_systick.o [1]
+KEY_Init                0x1000'4d41   0x5e  Code  Gb  LQ_KEY.o [1]
+LB                      0x2000'003c    0x4  Data  Gb  Control.o [1]
+LF                      0x2000'0038    0x4  Data  Gb  Control.o [1]
+LPTMR0_IRQHandler       0x1000'5141    0xc  Code  Gb  LPTMR.o [1]
+LPTMR_delay_ms          0x1000'5109   0x38  Code  Gb  LPTMR.o [1]
+LoadInt                 0x1000'309f   0x56  Code  Lc  xprintfsmall_nomb.o [2]
+Measure_Init            0x1000'56a9   0x44  Code  Gb  Control.o [1]
+NVIC_DisableIRQ         0x1000'5779   0x14  Code  Lc  LQPIT.o [1]
+NVIC_EnableIRQ          0x1000'4ffd   0x14  Code  Lc  LQGPIO.o [1]
+NVIC_EnableIRQ          0x1000'5765   0x14  Code  Lc  LQPIT.o [1]
+NVIC_EnableIRQ          0x1000'4361   0x16  Code  Lc  LQUART.o [1]
+OSC_HAL_SetCapacitor    0x1000'4d35    0xc  Code  Gb  fsl_osc_hal.o [1]
+OSC_HAL_SetExternalRefClkCmd
+                        0x1000'4a57    0xa  Code  Lc  fsl_clock_manager.o [1]
+OSC_HAL_SetExternalRefClkDiv
+                        0x1000'4a6b    0xe  Code  Lc  fsl_clock_manager.o [1]
+OSC_HAL_SetExternalRefClkInStopModeCmd
+                        0x1000'4a61    0xa  Code  Lc  fsl_clock_manager.o [1]
+PIT0_IRQHandler         0x1000'57ed    0xc  Code  Gb  LQPIT.o [1]
+PIT1_IRQHandler         0x1000'57f9   0x28  Code  Gb  LQPIT.o [1]
+PIT2_IRQHandler         0x1000'5821    0xc  Code  Gb  LQPIT.o [1]
+PIT3_IRQHandler         0x1000'582d    0xc  Code  Gb  LQPIT.o [1]
+PIT_Init                0x1000'578d   0x60  Code  Gb  LQPIT.o [1]
+PLL150MHz               0x1000'5cac   0x18  Data  Gb  LQ_PLL.o [1]
+PLL180MHz               0x1000'5cc4   0x18  Data  Gb  LQ_PLL.o [1]
+PLL200MHz               0x1000'5cdc   0x18  Data  Gb  LQ_PLL.o [1]
+PLL235MHz               0x1000'5cf4   0x18  Data  Gb  LQ_PLL.o [1]
+PLL250MHz               0x1000'5d0c   0x18  Data  Gb  LQ_PLL.o [1]
+PLL275MHz               0x1000'5d24   0x18  Data  Gb  LQ_PLL.o [1]
+PLL_Init                0x1000'5165  0x126  Code  Gb  LQ_PLL.o [1]
+PORTD_IRQHandler        0x1000'4f25   0xbe  Code  Gb  LQ_KEY.o [1]
+PORTE_IRQHandler        0x1000'4d9f  0x186  Code  Gb  LQ_KEY.o [1]
+RW$$Base                0x2000'0000          --   Gb  - Linker created -
+RW$$Limit               0x2000'0034          --   Gb  - Linker created -
+Region$$Table$$Base     0x1000'5c38          --   Gb  - Linker created -
+Region$$Table$$Limit    0x1000'5c5c          --   Gb  - Linker created -
+SCB_EnableDCache        0x1000'5927   0x52  Code  Lc  system_MKV58F24.o [1]
+SCB_EnableICache        0x1000'5905   0x22  Code  Lc  system_MKV58F24.o [1]
+SMC_HAL_GetStat         0x1000'5465    0x4  Code  Gb  fsl_smc_hal.o [1]
+SMC_HAL_SetMode         0x1000'533b  0x11c  Code  Gb  fsl_smc_hal.o [1]
+SMC_HAL_SetPowerModeHsrun
+                        0x1000'5321   0x1a  Code  Lc  fsl_smc_hal.o [1]
+SMC_HAL_SetPowerModeRun
+                        0x1000'52ed   0x1a  Code  Lc  fsl_smc_hal.o [1]
+SMC_HAL_SetPowerModeVlpr
+                        0x1000'5307   0x1a  Code  Lc  fsl_smc_hal.o [1]
+SMC_HAL_SetProtection   0x1000'5161    0x4  Code  Lc  LQ_PLL.o [1]
+ServoFTM_PWM_Init       0x1000'46ad  0x1ec  Code  Gb  LQFTM.o [1]
+Servo_Init              0x1000'56ed   0x20  Code  Gb  Control.o [1]
+SpeedMeasureFlag        0x2000'0288    0x1  Data  Gb  Control.o [1]
+Speed_meauser           0x1000'568d   0x1c  Code  Gb  Control.o [1]
+SysTick_Handler         0x1000'5d81   0x10  Code  Gb  fsl_hwtimer_systick_irq.o [1]
+SystemCoreClock         0x2000'0030    0x4  Data  Gb  system_MKV58F24.o [1]
+SystemInit              0x1000'5979   0x2c  Code  Gb  system_MKV58F24.o [1]
+UART0_RX_TX_IRQHandler  0x1000'463d    0xa  Code  Gb  LQUART.o [1]
+UART1_RX_TX_IRQHandler  0x1000'4647   0x14  Code  Gb  LQUART.o [1]
+UART2_RX_TX_IRQHandler  0x1000'465b   0x14  Code  Gb  LQUART.o [1]
+UART3_RX_TX_IRQHandler  0x1000'466f   0x14  Code  Gb  LQUART.o [1]
+UART4_RX_TX_IRQHandler  0x1000'4683   0x14  Code  Gb  LQUART.o [1]
+UART5_RX_TX_IRQHandler  0x1000'4697   0x14  Code  Gb  LQUART.o [1]
+UARTN                   0x2000'0018   0x18  Data  Gb  LQUART.o [1]
+UART_Get_Char           0x1000'4503   0x1a  Code  Gb  LQUART.o [1]
+UART_Init               0x1000'4377  0x18c  Code  Gb  LQUART.o [1]
+UART_Irq_En             0x1000'4553   0x88  Code  Gb  LQUART.o [1]
+UART_Put_Char           0x1000'451d   0x1a  Code  Gb  LQUART.o [1]
+UART_Put_Str            0x1000'4537   0x1c  Code  Gb  LQUART.o [1]
+ZI$$Base                0x2000'0034          --   Gb  - Linker created -
+ZI$$Limit               0x2000'028c          --   Gb  - Linker created -
+_GetN                   0x1000'3351   0x22  Code  Lc  xscanfsmall_nomb.o [2]
+_GetintSmallNoMb        0x1000'369d  0x1f0  Code  Lc  xscanfsmall_nomb.o [2]
+_GetstrSmallNoMb        0x1000'359d   0xfc  Code  Lc  xscanfsmall_nomb.o [2]
+_LitobSmallNoMb         0x1000'3231   0xce  Code  Lc  xprintfsmall_nomb.o [2]
+_PrintfSmallNoMb        0x1000'2e81  0x214  Code  Gb  xprintfsmall_nomb.o [2]
+_PutcharsSmallNoMb      0x1000'32ff   0x2e  Code  Lc  xprintfsmall_nomb.o [2]
+_PutfldSmallNoMb        0x1000'30f5  0x13c  Code  Lc  xprintfsmall_nomb.o [2]
+_SProut                 0x1000'2bcb    0xa  Code  Gb  xsprout.o [2]
+_SScin                  0x1000'2247   0x1e  Code  Gb  xsscin.o [2]
+_ScanfSmallNoMb         0x1000'338d  0x20a  Code  Gb  xscanfsmall_nomb.o [2]
+_UngetN                 0x1000'3373   0x1a  Code  Lc  xscanfsmall_nomb.o [2]
+__RAM_VECTOR_TABLE_SIZE {Abs}
+                                0x0         Data  Gb  <internal module>
+__VECTOR_RAM {Abs}      0x1000'0000         Data  Gb  <internal module>
+__VECTOR_TABLE {Abs}    0x1000'0000         Data  Gb  <internal module>
+__Vectors               0x1000'0000          --   Gb  startup_MKV58F24.o [1]
+__Vectors_End           0x1000'0400         Data  Gb  startup_MKV58F24.o [1]
+__Vectors_Size {Abs}          0x400          --   Gb  startup_MKV58F24.o [1]
+__aeabi_assert          0x1000'4d11   0x24  Code  Gb  ABIassert.o [5]
+__aeabi_cdcmpeq         0x1000'2de1         Code  Gb  DblCmpEq.o [3]
+__aeabi_dmul            0x1000'2c3d         Code  Gb  DblMul.o [3]
+__aeabi_memclr          0x1000'58fd         Code  Gb  ABImemclr.o [4]
+__aeabi_memcpy          0x1000'21a1         Code  Gb  ABImemcpy.o [4]
+__aeabi_memcpy4         0x1000'21c1         Code  Gb  ABImemcpy.o [4]
+__aeabi_memcpy8         0x1000'21c1         Code  Gb  ABImemcpy.o [4]
+__aeabi_memset          0x1000'2bd5         Code  Gb  ABImemset.o [4]
+__cmain                 0x1000'5c5d         Code  Gb  cmain.o [4]
+__data_GetMemChunk      0x1000'2175   0x2c  Code  Gb  xgetmemchunk.o [2]
+__data_GetMemChunk::start
+                        0x2000'0280    0x4  Data  Lc  xgetmemchunk.o [2]
+__exit                  0x1000'2265   0x14  Code  Gb  exit.o [5]
+__iar_Fail_s            0x1000'38fd   0x1c  Code  Gb  xfail_s.o [2]
+__iar_Memchr            0x1000'393d         Code  Gb  memchr.o [4]
+__iar_Memset            0x1000'2bd5         Code  Gb  ABImemset.o [4]
+__iar_Memset_word       0x1000'2bdd         Code  Gb  ABImemset.o [4]
+__iar_Stolx             0x1000'3995   0x7e  Code  Gb  iar_Stolx.o [2]
+__iar_Stoulx            0x1000'3a19  0x13e  Code  Gb  iar_Stoulx.o [2]
+__iar_Strchr            0x1000'38e5         Code  Gb  strchr.o [4]
+__iar_copy_init3        0x1000'5b9d   0x2c  Code  Gb  copy_init3.o [4]
+__iar_data_init3        0x1000'5bc9   0x28  Code  Gb  data_init.o [4]
+__iar_dlfree            0x1000'1895  0x4f6  Code  Gb  dlmalloc.o [2]
+__iar_dlmalloc          0x1000'15df  0x2b6  Code  Gb  dlmalloc.o [2]
+__iar_dlrealloc         0x1000'20a9   0x7c  Code  Gb  dlmalloc.o [2]
+__iar_init_vfp          0x1000'5c15         Code  Gb  fpinit_M.o [3]
+__iar_program_start     0x1000'5d9d         Code  Gb  cstartup_M.o [4]
+__iar_zero_init3        0x1000'213b   0x3a  Code  Gb  zero_init3.o [4]
+__low_level_init        0x1000'5c7b    0x4  Code  Gb  low_level_init.o [2]
+__vector_table          0x1000'0000         Data  Gb  startup_MKV58F24.o [1]
+__vector_table_0x1c     0x1000'001c         Data  Gb  startup_MKV58F24.o [1]
+_call_main              0x1000'5c69         Code  Gb  cmain.o [4]
+_exit                   0x1000'5c85         Code  Gb  cexit.o [4]
+_gm_                    0x2000'00a8  0x1d8  Data  Lc  dlmalloc.o [2]
+_main                   0x1000'5c77         Code  Gb  cmain.o [4]
+abort                   0x1000'2135    0x6  Code  Gb  abort.o [2]
+add_item_to_array       0x1000'2a67   0x2c  Code  Lc  cJSON.o [1]
+add_item_to_object      0x1000'2a95   0x72  Code  Lc  cJSON.o [1]
+add_segment             0x1000'07d9  0x1f2  Code  Lc  dlmalloc.o [2]
+bus_clk_M               0x2000'008c    0x4  Data  Gb  LQ_PLL.o [1]
+cJSON_AddStringToObject
+                        0x1000'2b07   0x32  Code  Gb  cJSON.o [1]
+cJSON_CreateObject      0x1000'2b7b   0x14  Code  Gb  cJSON.o [1]
+cJSON_CreateString      0x1000'2b45   0x36  Code  Gb  cJSON.o [1]
+cJSON_Delete            0x1000'22d5   0x5a  Code  Gb  cJSON.o [1]
+cJSON_New_Item          0x1000'22b5   0x20  Code  Lc  cJSON.o [1]
+cJSON_Print             0x1000'2719    0xc  Code  Gb  cJSON.o [1]
+cJSON_strdup            0x1000'2279   0x3c  Code  Lc  cJSON.o [1]
+cast_away_const         0x1000'2a93    0x2  Code  Lc  cJSON.o [1]
+core_clk_M              0x2000'0088    0x4  Data  Gb  LQ_PLL.o [1]
+digits                  0x1000'59ec   0x28  Data  Lc  iar_Stoulx.o [2]
+dispose_chunk           0x1000'0ba5  0x4a6  Code  Lc  dlmalloc.o [2]
+ensure                  0x1000'2335   0xce  Code  Lc  cJSON.o [1]
+exit                    0x1000'5c7f    0x4  Code  Gb  exit.o [2]
+free                    0x1000'58f3    0x4  Code  Gb  heaptramp0.o [2]
+g_fastInternalRefClkFreq
+                        0x2000'0010    0x4  Data  Gb  fsl_mcg_hal.o [1]
+g_hwtimersSystick       0x2000'0080    0x4  Data  Lc  fsl_hwtimer_systick.o [1]
+g_oscBase               0x1000'5df8    0x4  Data  Gb  fsl_clock_manager_common.o [1]
+g_slowInternalRefClkFreq
+                        0x2000'0014    0x4  Data  Gb  fsl_mcg_hal.o [1]
+g_xtal0ClkFreq          0x2000'0084    0x4  Data  Gb  fsl_mcg_hal.o [1]
+get_decimal_point       0x1000'232f    0x4  Code  Lc  cJSON.o [1]
+global_hooks            0x2000'0000    0xc  Data  Lc  cJSON.o [1]
+hongwaiDat              0x1000'570d   0x2c  Code  Gb  Control.o [1]
+hongwaidat              0x2000'0040   0x40  Data  Gb  Control.o [1]
+i                       0x2000'0034    0x4  Data  Gb  APPmain.o [1]
+init_data_bss           0x1000'5b2d   0x3c  Code  Gb  startup.o [1]
+init_mparams            0x1000'042b   0x32  Code  Lc  dlmalloc.o [2]
+init_top                0x1000'045d   0x36  Code  Lc  dlmalloc.o [2]
+int2str                 0x1000'585d   0x96  Code  Gb  usartcontrol.o [1]
+main                    0x1000'5569  0x124  Code  Gb  APPmain.o [1]
+mcgModeMatrix           0x1000'5aec   0x40  Data  Lc  fsl_clock_manager.o [1]
+memchr                  0x1000'393d         Code  Gb  memchr.o [4]
+mparams                 0x2000'0090   0x18  Data  Lc  dlmalloc.o [2]
+ndigs                   0x1000'59c4   0x28  Data  Lc  iar_Stoulx.o [2]
+prepend_alloc           0x1000'0493  0x346  Code  Lc  dlmalloc.o [2]
+print                   0x1000'2641   0xd8  Code  Lc  cJSON.o [1]
+print::default_buffer_size
+                        0x1000'5df4    0x4  Data  Lc  cJSON.o [1]
+print_array             0x1000'2835   0xb2  Code  Lc  cJSON.o [1]
+print_number            0x1000'2427   0xd6  Code  Lc  cJSON.o [1]
+print_object            0x1000'28e7  0x17a  Code  Lc  cJSON.o [1]
+print_string            0x1000'2637    0xa  Code  Lc  cJSON.o [1]
+print_string_ptr        0x1000'24fd  0x13a  Code  Lc  cJSON.o [1]
+print_value             0x1000'2729   0xf2  Code  Lc  cJSON.o [1]
+realloc                 0x1000'58f7    0x4  Code  Gb  heaptramp0.o [2]
+sec_hand                0x2000'0284    0x4  Data  Lc  xfail_s.o [2]
+segment_holding         0x1000'0411   0x1a  Code  Lc  dlmalloc.o [2]
+sprintf                 0x1000'2e01   0x40  Code  Gb  sprintf.o [2]
+sscanf                  0x1000'2e41   0x28  Code  Gb  sscanf.o [2]
+strchr                  0x1000'38e5         Code  Gb  strchr.o [4]
+strcpy                  0x1000'2e69         Code  Gb  strcpy.o [4]
+strlen                  0x1000'2b95         Code  Gb  strlen.o [4]
+strtol                  0x1000'3a13    0x4  Code  Gb  iar_Stolx.o [2]
+strtoul                 0x1000'3b5d    0x2  Code  Gb  iar_Stoulx.o [2]
+suffix_object           0x1000'2a61    0x6  Code  Lc  cJSON.o [1]
+sys_alloc               0x1000'09d1  0x164  Code  Lc  dlmalloc.o [2]
+sys_trim                0x1000'0b35   0x64  Code  Lc  dlmalloc.o [2]
+tmalloc_large           0x1000'104b  0x386  Code  Lc  dlmalloc.o [2]
+tmalloc_small           0x1000'13d1  0x200  Code  Lc  dlmalloc.o [2]
+try_realloc_chunk       0x1000'1d8b  0x318  Code  Lc  dlmalloc.o [2]
+update_offset           0x1000'2403   0x24  Code  Lc  cJSON.o [1]
+
+
+[1] = D:\SmartCar\MCU2\debug\obj
+[2] = dl7M_tln.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  23 338 bytes of readonly  code memory
+     726 bytes of readonly  data memory
+   5 769 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

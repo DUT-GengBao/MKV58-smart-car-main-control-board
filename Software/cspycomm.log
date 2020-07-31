@@ -1,0 +1,296 @@
+apr 3/20:33:39.154 DEBUG2 : 		
+
+StartSession()
+
+apr 3/20:33:39.154 INFO   : Debug Log(info): Loading the CMSIS-DAP driver
+apr 3/20:33:39.205 DEBUG2 : 		-> ConnectToHardware()
+apr 3/20:33:39.205 DEBUG2 : 		-> CreateJetTerminal()
+apr 3/20:33:39.205 DEBUG2 : 		<- CreateJetTerminal()
+apr 3/20:33:39.205 DEBUG2 : 		-> AcquireSigAPIPtr()
+apr 3/20:33:39.205 DEBUG2 : 		  SigAPISetPath('E:\Software\IAR\arm\bin\jet\bin')
+apr 3/20:33:39.207 DEBUG2 : 		<- AcquireSigAPIPtr()
+apr 3/20:33:39.207 DEBUG2 : 		-> AcquireSigProbe()
+apr 3/20:33:39.208 DEBUG2 : 		  SigProbe version: 1.17
+apr 3/20:33:39.208 DEBUG2 : 		<- AcquireSigProbe()
+apr 3/20:33:39.208 DEBUG2 : 		-> SigProbeInit()
+apr 3/20:33:39.208 INFO   : Debug Log(info): Probe: CMSIS-DAP probe SW module ver 1.17
+
+apr 3/20:33:39.208 INFO   : Probe: CMSIS-DAP probe SW module ver 1.17
+
+apr 3/20:33:39.208 DEBUG2 : 		<- SigProbeInit()
+apr 3/20:33:39.209 DEBUG2 : 		-> ConnectToProbe()
+apr 3/20:33:39.209 DEBUG2 : 		  ISigProbe::EnumScan()
+apr 3/20:33:39.211 DEBUG2 : 		  scanning finished: found 1 probes
+apr 3/20:33:44.007 DEBUG2 : 		    connection Serial No: CMSIS-DAP_JX:0001A0000000
+apr 3/20:33:44.008 DEBUG2 : 		    connection found probes: 
+apr 3/20:33:44.029 INFO   : Debug Log(info): Probe: Connecting to CMSIS-DAP_JX:0001A0000000 firmware v.1.0
+
+apr 3/20:33:44.029 INFO   : Probe: Connecting to CMSIS-DAP_JX:0001A0000000 firmware v.1.0
+
+apr 3/20:33:44.029 DEBUG2 : 		<- ConnectToProbe()
+apr 3/20:33:44.029 DEBUG2 : 		-> CreateSigEmus()
+apr 3/20:33:44.029 DEBUG2 : 		  ISigAPI::CreateInstance('ISigEmu', 'EARM', '')
+apr 3/20:33:44.030 DEBUG2 : 		Core 0: sigEmu->LinkAttach(SigProbe)
+apr 3/20:33:44.030 DEBUG2 : 		  core 0: IsigEmu::ParamSet('Emulator', 'cmsisdap')
+apr 3/20:33:44.030 DEBUG2 : 		  core 0: IsigEmu::ParamSet('Processor', 'Cortex-M7')
+apr 3/20:33:44.030 DEBUG2 : 		  core 0: IsigEmu::ParamSet('JtagHeader', 'ARM-SWD')
+apr 3/20:33:44.030 DEBUG2 : 		  core 0: IsigEmu::ParamSet('CoreSightSWJ', 'SWD')
+apr 3/20:33:44.030 DEBUG2 : 		  core 0: IsigEmu::ParamSet('JTagSpeed', 'auto')
+apr 3/20:33:44.030 DEBUG2 : 		  core 0: IsigEmu::ParamSet('BoardCfg', '-auto')
+apr 3/20:33:44.030 DEBUG2 : 		  core 0: IsigEmu::ParamSet('JtagInitDelay', '200,r:300')
+apr 3/20:33:44.030 DEBUG2 : 		  core 0: IsigEmu::ParamSet('BigEndian', '0')
+apr 3/20:33:44.030 DEBUG2 : 		  ISigEmu::LinkAttach('SigTerminalLog'...)
+apr 3/20:33:44.030 DEBUG2 : 		Core 0: sigEmu->LinkAttach(SigTerminalLog)
+apr 3/20:33:44.030 DEBUG2 : 		<- CreateSigEmus()
+apr 3/20:33:44.030 DEBUG2 : 		-> CreateInterfaceComProtocol()
+apr 3/20:33:44.030 DEBUG2 : 		  ISigProbe::AcquireInterface('ComProtocol')
+apr 3/20:33:44.030 DEBUG2 : 		<- CreateInterfaceComProtocol()
+apr 3/20:33:44.030 DEBUG2 : 		-> CollectCoreNames()
+apr 3/20:33:44.030 DEBUG2 : 		<- CollectCoreNames()
+apr 3/20:33:44.030 DEBUG2 : 		-> DoIceConnect()
+apr 3/20:33:44.030 DEBUG2 : 		  core 0: IsigEmu::ParamSet('BoardDID', '')
+apr 3/20:33:44.030 DEBUG2 : 		Core 0: IceConnect(...)
+apr 3/20:33:44.031 DEBUG2 : 		<- DoIceConnect()
+apr 3/20:33:44.031 DEBUG2 : 		-> DoIceInit()
+apr 3/20:33:44.031 DEBUG2 : 		Core 0: IceInit(...)
+apr 3/20:33:44.037 DEBUG2 : 		ISigEmu::IceVersion(1ba)
+apr 3/20:33:44.037 INFO   : Debug Log(info): Emulation layer version 4.42
+apr 3/20:33:44.037 DEBUG2 : 		ISigEmu::IceStatus(0)
+apr 3/20:33:44.037 DEBUG2 : 		<- DoIceInit()
+apr 3/20:33:44.037 DEBUG2 : 		-> CreateCmdInterpreter()
+apr 3/20:33:44.037 DEBUG2 : 		  ISigProbe::CreateInstance(..., 'SigCmdInterpreter', '')
+apr 3/20:33:44.038 DEBUG2 : 		  ISigCmdInterpreter::LinkAttach('ISigEmu',...)
+apr 3/20:33:44.038 DEBUG2 : 		<- CreateCmdInterpreter()
+apr 3/20:33:44.038 DEBUG2 : 		-> AcquireA2DInterface()
+apr 3/20:33:44.038 DEBUG2 : 		  ISigProbe::AcquireInterface('ISigA2D')
+apr 3/20:33:44.038 ERROR  :   ConnectToHardware(): Failed to create sigA2D object
+apr 3/20:33:44.255 INFO   : Debug Log(info): Notification to init-after-power-up hookup.
+
+apr 3/20:33:44.255 INFO   : Notification to init-after-power-up hookup.
+
+apr 3/20:33:44.255 DEBUG2 : 		<Call to _ExecDeviceProbeConnect: macro undefined
+apr 3/20:33:44.256 DEBUG2 : 		<Call to execUserProbeConnect: macro undefined
+apr 3/20:33:44.256 INFO   : Debug Log(info): Notification to core-connect hookup.
+
+apr 3/20:33:44.256 INFO   : Notification to core-connect hookup.
+
+apr 3/20:33:44.256 DEBUG2 : 		<Call to _ExecDeviceCoreConnect: macro undefined
+apr 3/20:33:44.256 DEBUG2 : 		<Call to execUserCoreConnect: macro undefined
+apr 3/20:33:44.261 INFO   : Debug Log(info): Connected DAP v2 on SWD. Detected IDCODE=0x5ba02477.
+
+apr 3/20:33:44.261 INFO   : Connected DAP v2 on SWD. Detected IDCODE=0x5ba02477.
+
+apr 3/20:33:44.593 INFO   : Debug Log(info): Connecting to TAP#0 DAP AHB-AP port 0 (IDR=0x64770001).
+
+apr 3/20:33:44.593 INFO   : Connecting to TAP#0 DAP AHB-AP port 0 (IDR=0x64770001).
+
+apr 3/20:33:44.595 INFO   : Debug Log(info): Recognized CPUID=0x410fc272 Cortex-M7 r0p2 arch ARMv7-M
+
+apr 3/20:33:44.595 INFO   : Recognized CPUID=0x410fc272 Cortex-M7 r0p2 arch ARMv7-M
+
+apr 3/20:33:44.604 INFO   : Debug Log(info): Set cacheable access on AHB-AP port 0 (HPROT=0xeb000000).
+
+apr 3/20:33:44.604 INFO   : Set cacheable access on AHB-AP port 0 (HPROT=0xeb000000).
+
+apr 3/20:33:44.611 INFO   : Debug Log(info): Debug resources: 8 instruction comparators, 4 data watchpoints.
+
+apr 3/20:33:44.612 INFO   : Debug resources: 8 instruction comparators, 4 data watchpoints.
+
+apr 3/20:33:44.649 DEBUG2 : 		  ConnectToHardware(), checking status (#1): Core 0: CpuStatus(status = <0x3: CPU_STATUS_MPOWER | CPU_STATUS_MRUN>) = 0
+apr 3/20:33:44.649 INFO   : Debug Log(minor): CPU status OK
+apr 3/20:33:44.649 DEBUG2 : 		<- AcquireA2DInterface()
+apr 3/20:33:44.649 DEBUG2 : 		-> AcquireEmuVectInterface()
+apr 3/20:33:44.649 DEBUG2 : 		  ISigEmu::AcquireInterface('ISigEmuVect') (core 0)
+apr 3/20:33:44.649 DEBUG2 : 		<- AcquireEmuVectInterface()
+apr 3/20:33:44.649 DEBUG2 : 		-> AcquireEmuWptInterface()
+apr 3/20:33:44.649 DEBUG2 : 		  ISigEmu::AcquireInterface('ISigEmuWpt')
+apr 3/20:33:44.657 DEBUG2 : 		<- AcquireEmuWptInterface()
+apr 3/20:33:44.657 DEBUG2 : 		-> AcquirePcSamplerInterface()
+apr 3/20:33:44.657 DEBUG2 : 		  ISigEmu::AcquireInterface('ISigPcSampler')
+apr 3/20:33:44.666 DEBUG2 : 		<- AcquirePcSamplerInterface()
+apr 3/20:33:44.666 DEBUG2 : 		<- ConnectToHardware()
+apr 3/20:33:44.666 INFO   : Debug Log(info): MultiCore: Asynchronous core execution FORCED.
+apr 3/20:33:44.666 INFO   : Debug Log(info): MultiCore: Synchronous core execution DISABLED.
+apr 3/20:33:44.666 DEBUG2 : 		<Call to _ExecDevicePreReset: macro undefined
+apr 3/20:33:44.666 DEBUG2 : 		<Call to execUserPreReset: macro undefined
+apr 3/20:33:44.666 DEBUG2 : 		->   LowLevelReset(system, delay 200)
+apr 3/20:33:44.667 INFO   : Debug Log(info): LowLevelReset(system, delay 200)
+apr 3/20:33:44.684 DEBUG2 : 		  core 0: IsigEmu::ParamSet('JtagInitDelay', '200,r:300')
+apr 3/20:33:44.685 DEBUG2 : 		  core 0: IsigEmu::ParamSet('ResetStyle', 'SYSTEM')
+apr 3/20:33:44.685 DEBUG2 : 		Core 0: system reset
+apr 3/20:33:44.912 DEBUG2 : 		->   LowLevelReset(): WaitForCpuResetToComplete(core 0)
+apr 3/20:33:44.918 DEBUG2 : 		  LowLevelReset(): Core 0: CpuStatus(status = <0x5: CPU_STATUS_MPOWER | CPU_STATUS_MRESET>) = 0
+apr 3/20:33:44.918 INFO   : Debug Log(info): CPU status - IN RESET
+apr 3/20:33:44.983 DEBUG2 : 		  LowLevelReset(): Core 0: CpuStatus(status = <0x1: CPU_STATUS_MPOWER>) = 0
+apr 3/20:33:44.983 INFO   : Debug Log(minor): CPU status OK
+apr 3/20:33:44.983 DEBUG2 : 		<-   LowLevelReset(): WaitForCpuResetToComplete(core 0)
+apr 3/20:33:45.184 DEBUG2 : 		->   LowLevelReset(): WaitForCpuResetToComplete(core 0)
+apr 3/20:33:45.190 DEBUG2 : 		  LowLevelReset(): Core 0: CpuStatus(status = <0x1: CPU_STATUS_MPOWER>) = 0
+apr 3/20:33:45.190 DEBUG2 : 		<-   LowLevelReset(): WaitForCpuResetToComplete(core 0)
+apr 3/20:33:45.198 DEBUG2 : 		ISigPcSampler::SampleRegister(SIGAPIARM_SAMPLE_7M_CYCLE) = 0x13b9476
+apr 3/20:33:45.198 DEBUG2 : 		<-   LowLevelReset(system, delay 200)
+apr 3/20:33:45.198 DEBUG2 : 		->   StartSession(): WaitForCpuResetToComplete(core 0)
+apr 3/20:33:45.203 DEBUG2 : 		  StartSession(): Core 0: CpuStatus(status = <0x1: CPU_STATUS_MPOWER>) = 0
+apr 3/20:33:45.204 DEBUG2 : 		<-   StartSession(): WaitForCpuResetToComplete(core 0)
+apr 3/20:33:45.210 DEBUG2 : 		StartSession() checking powerCore 0: CpuStatus(status = <0x1: CPU_STATUS_MPOWER>) = 0
+apr 3/20:33:45.210 DEBUG2 : 		Core 0: IceInfo(0, ...)
+apr 3/20:33:45.228 DEBUG2 : 		<Call to _ExecDevicePreload: macro undefined
+apr 3/20:33:45.228 DEBUG2 : 		<Call to execUserPreload: macro undefined
+apr 3/20:33:45.440 INFO   : Debug Log(info): Loaded debugee: F:\智能车\软件\信标5.0正式版\debug\demoLQ_KV58F24.out
+apr 3/20:33:45.441 DEBUG2 : 		-------------- Download, suppress = 0
+apr 3/20:33:45.441 DEBUG2 : 		  WritePostCache(): MemWrite(core 0, 0:0x0, 14820 bytes [by 0] = [ 00 00 02 20 91 38 00 00 ... ])
+apr 3/20:33:45.920 DEBUG2 : 		  WritePostCache(): MemWrite(core 0, 0:0x20000000, 45992 bytes [by 0] = [ 00 09 3d 00 00 80 00 00 ... ])
+apr 3/20:33:47.404 DEBUG2 : 		<Call to _ExecDeviceVerifyInit: macro undefined
+apr 3/20:33:47.404 DEBUG2 : 		StopDownload()
+apr 3/20:33:47.404 DEBUG2 : 		VectorCatchGet(core 0, allowed mask 0xff, current mask 0x0)
+apr 3/20:33:47.404 DEBUG2 : 		VectorCatchSet(core 0, mask 0x100)
+apr 3/20:33:47.432 INFO   : Debug Log(info): 60812 bytes downloaded (30.24 Kbytes/sec)
+apr 3/20:33:47.432 INFO   : Debug Log(info): Download completed.
+apr 3/20:33:47.432 DEBUG2 : 		============== Finished loading application. Now online.
+apr 3/20:33:47.432 DEBUG2 : 		<Call to _ExecDevicePreReset: macro undefined
+apr 3/20:33:47.432 DEBUG2 : 		<Call to execUserPreReset: macro undefined
+apr 3/20:33:47.433 DEBUG2 : 		-> LowLevelReset(1)
+apr 3/20:33:47.433 DEBUG2 : 		->   LowLevelReset(software, delay 200)
+apr 3/20:33:47.433 INFO   : Debug Log(info): LowLevelReset(software, delay 200)
+apr 3/20:33:47.433 DEBUG2 : 		  core 0: IsigEmu::ParamSet('JtagInitDelay', '200,r:300')
+apr 3/20:33:47.439 DEBUG2 : 		LowLevelSoftwareReset(): Core 0: CpuStatus(status = <0x1: CPU_STATUS_MPOWER>) = 0
+apr 3/20:33:47.439 DEBUG2 : 		  core 0: IsigEmu::ParamSet('ResetStyle', 'SOFTWARE')
+apr 3/20:33:47.439 DEBUG2 : 		Core 0: LowLevelSoftwareReset()
+apr 3/20:33:48.039 DEBUG2 : 		->   LowLevelSoftwareReset(): WaitForCpuResetToComplete(core 0)
+apr 3/20:33:48.083 DEBUG2 : 		  LowLevelSoftwareReset(): Core 0: CpuStatus(status = <0x1: CPU_STATUS_MPOWER>) = 0
+apr 3/20:33:48.083 DEBUG2 : 		<-   LowLevelSoftwareReset(): WaitForCpuResetToComplete(core 0)
+apr 3/20:33:48.284 DEBUG2 : 		->   LowLevelReset(): WaitForCpuResetToComplete(core 0)
+apr 3/20:33:48.290 DEBUG2 : 		  LowLevelReset(): Core 0: CpuStatus(status = <0x1: CPU_STATUS_MPOWER>) = 0
+apr 3/20:33:48.290 DEBUG2 : 		<-   LowLevelReset(): WaitForCpuResetToComplete(core 0)
+apr 3/20:33:48.298 DEBUG2 : 		ISigPcSampler::SampleRegister(SIGAPIARM_SAMPLE_7M_CYCLE) = 0x13b949c
+apr 3/20:33:48.298 DEBUG2 : 		<-   LowLevelReset(software, delay 200)
+apr 3/20:33:48.298 DEBUG2 : 		<- LowLevelReset(1)
+apr 3/20:33:48.300 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0x0, 4 bytes [by 4] = [ 00 00 02 20 ])
+apr 3/20:33:48.302 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0x4, 4 bytes [by 4] = [ 91 38 00 00 ])
+apr 3/20:33:48.302 DEBUG2 : 		CpuRegListSet(Core 0, SP_Main ->17) = 0x20020000 (537001984)
+apr 3/20:33:48.307 DEBUG2 : 		CpuRegListSet(Core 0, PC ->15) = 0x3890 (14480)
+apr 3/20:33:48.312 DEBUG2 : 		CpuRegListGet(Core 0, PC -> 15) = 0x3890 (14480)
+apr 3/20:33:48.312 INFO   : Debug Log(info): Target reset
+apr 3/20:33:48.312 DEBUG2 : 		<Call to _ExecDeviceReset: macro undefined
+apr 3/20:33:48.312 DEBUG2 : 		<Call to execUserReset: macro undefined
+apr 3/20:33:48.319 DEBUG2 : 		SetCodeBreak(<0:0x34b0>, 1 units, 'Stack window trigger')
+apr 3/20:33:48.319 DEBUG2 : 		  SetCodeBreak(): BreakSetAttr(bank 0, count 1, addr 0x34b0, attr <0x2000d: CPUMODE(THUMB) | SIGEMU_BRK_ATTR_SET | SIGEMU_BRK_ATTR_SW | SIGEMU_BRK_ATTR_HW>)
+apr 3/20:33:48.339 DEBUG2 : 		  SetBreakpoint(): BreakGetAttr(bank 0, count 1, addr 0x34b0, attr <0x20405: CPUMODE(THUMB) | SIGEMU_BRK_ATTR_SET | SIGEMU_BRK_ATTR_SW | SIGEMU_BRK_ATTR_LITTLEENDIAN>)
+apr 3/20:33:48.351 DEBUG2 : 		-> SetupTrace()
+apr 3/20:33:48.351 DEBUG2 : 		-> AcquireXTrace()
+apr 3/20:33:48.351 DEBUG2 : 		  ISigProbe::AcquireInterface('ISigXTrace')
+apr 3/20:33:48.351 DEBUG2 : 		  ISigAPI::CreateInstance('ISigXTrace')
+apr 3/20:33:48.355 DEBUG2 : 		<- AcquireXTrace()
+apr 3/20:33:48.355 DEBUG2 : 		  ISigXTrace::LinkAttach('SigTerminalLog',...)
+apr 3/20:33:48.355 DEBUG2 : 		  ISigXTrace::LinkAttach('ISigXTraceClient',...)
+apr 3/20:33:48.355 DEBUG2 : 		  ISigXTrace::LinkAttach('SigEmu',...)
+apr 3/20:33:48.355 DEBUG2 : 		  ISigXTrace::LinkAttach('SigProbe',...)
+apr 3/20:33:48.356 DEBUG2 : 		-> SetupLowLevelTrace()
+apr 3/20:33:48.356 DEBUG2 : 		  ISigXTrace::Init('SWO,ETB')
+apr 3/20:33:48.357 INFO   : Debug Log(info): INFO: Configuring trace using 'SWO,ETB' setting ...
+
+apr 3/20:33:48.357 INFO   : INFO: Configuring trace using 'SWO,ETB' setting ...
+
+apr 3/20:33:48.357 INFO   : Debug Log(info): INFO: SWO trace mode is not supported by the probe (use I-jet/I-jet-Trace probe) - trace is disabled.
+
+apr 3/20:33:48.357 INFO   : INFO: SWO trace mode is not supported by the probe (use I-jet/I-jet-Trace probe) - trace is disabled.
+
+apr 3/20:33:48.357 DEBUG2 : 		  ISigXTrace::TraceInfo(...) -> NULL (no trace)
+apr 3/20:33:48.358 DEBUG2 : 		  ISigAPI::ReleaseInstance(sigXTrace)
+apr 3/20:33:48.358 DEBUG2 : 		<- SetupLowLevelTrace()
+apr 3/20:33:48.358 DEBUG2 : 		-> AcquireSWOInterface()
+apr 3/20:33:48.358 DEBUG2 : 		  ISigProbe::AcquireInterface('ISigSWO')
+apr 3/20:33:48.358 ERROR  :   ConnectToHardware(): Failed to create sigSWO object.
+apr 3/20:33:48.358 DEBUG2 : 		<- AcquireSWOInterface()
+apr 3/20:33:48.358 DEBUG2 : 		-> CreateSigChanInterface()
+apr 3/20:33:48.358 DEBUG2 : 		<- CreateSigChanInterface()
+apr 3/20:33:48.358 DEBUG2 : 		-> SetupSigChanInterface()
+apr 3/20:33:48.358 DEBUG2 : 		<- SetupSigChanInterface()
+apr 3/20:33:48.370 DEBUG2 : 		<- SetupTrace()
+apr 3/20:33:48.371 DEBUG2 : 		-> SetupProfiling()
+apr 3/20:33:48.371 DEBUG2 : 		<- SetupProfiling()
+apr 3/20:33:48.371 INFO   : Debug Log(info): MultiCore: Synchronous core execution DISABLED.
+apr 3/20:33:48.379 DEBUG2 : 		SetCodeBreak(<9:0xf000000000000000>, 1 units, 'C-SPY Terminal I/O && library support module')
+apr 3/20:33:48.380 DEBUG2 : 		<Call to _ExecDeviceSetup: macro undefined
+apr 3/20:33:48.380 DEBUG2 : 		<Call to execUserSetup: macro undefined
+apr 3/20:33:48.386 DEBUG2 : 		PlDriver::Go(core 0): mIsExecuting[0] = true
+apr 3/20:33:48.386 DEBUG2 : 		-> LowLevelGo(core 0)
+apr 3/20:33:48.386 DEBUG2 : 		CpuRegListGet(Core 0, PC ->15) = 0x3890 (14480)
+apr 3/20:33:48.388 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0x3890, 2 bytes [by 2] = [ 72 b6 ])
+apr 3/20:33:48.388 DEBUG2 : 		<Call to _ExecDeviceExecutionStarted: macro undefined
+apr 3/20:33:48.388 DEBUG2 : 		<Call to execUserExecutionStarted: macro undefined
+apr 3/20:33:48.394 DEBUG2 : 		  LowLevelGo(core 0) [multi = false], CpuStatus(): Core 0: CpuStatus(status = <0x1: CPU_STATUS_MPOWER>) = 0
+apr 3/20:33:48.394 DEBUG2 : 		Core 0:   LowLevelGo(core 0) [multi = false], CpuGo()
+apr 3/20:33:48.475 DEBUG2 : 		CpuRegListGet(Core 0, PC -> 15) = 0x34b0 (13488)
+apr 3/20:33:48.475 DEBUG2 : 		LowLevelGo(core 0): errNo == ERR_OK, cpu status = not running, not sleeping, cpu power = 1 --> Exit LowLevelGo loop
+apr 3/20:33:48.475 DEBUG2 : 		LowLevelGo(core 0): Setting single mIsExecuting[0] = false [multi == false]
+apr 3/20:33:48.475 DEBUG2 : 		LowLevelGo(core 0): CPU core 0 is now stopped, after 2 polls in 0.006s
+apr 3/20:33:48.475 DEBUG2 : 		<Call to _ExecDeviceExecutionStopped: macro undefined
+apr 3/20:33:48.475 DEBUG2 : 		<Call to execUserExecutionStopped: macro undefined
+apr 3/20:33:48.477 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0x34b0, 2 bytes [by 2] = [ 10 b5 ])
+apr 3/20:33:48.483 DEBUG2 : 		  GetStopBreaks(): BreakGetAttr(bank 0, count 1, addr 0x34b0, attr <0x20405: CPUMODE(THUMB) | SIGEMU_BRK_ATTR_SET | SIGEMU_BRK_ATTR_SW | SIGEMU_BRK_ATTR_LITTLEENDIAN>)
+apr 3/20:33:48.483 DEBUG2 : 		LowLevelGo(core 0): Stopped at breakpoint
+apr 3/20:33:48.483 DEBUG2 : 		<- LowLevelGo(core 0)
+apr 3/20:33:48.483 DEBUG2 : 		PlDriver::Go(core 0): goStatus = 0
+apr 3/20:33:48.491 DEBUG2 : 		ISigPcSampler::SampleRegister(SIGAPIARM_SAMPLE_7M_CYCLE) = 0x13bf8f9
+apr 3/20:33:48.491 DEBUG2 : 		ClearCodeBreak(<0:0x34b0>, 1 units)
+apr 3/20:33:48.491 DEBUG2 : 		  ClearCodeBreak(): BreakClr(bank 0, count 1, addr 0x34b0)
+apr 3/20:33:48.514 DEBUG2 : 		CpuRegListGet(Core 0, LR -> 14) = 0x3877 (14455)
+apr 3/20:33:48.514 DEBUG2 : 		CpuRegListGet(Core 0, XPSR -> 16) = 0x61000000 (1627389952)
+apr 3/20:33:48.514 DEBUG2 : 		CpuRegListGet(Core 0, SP_Main -> 17) = 0x20020000 (537001984)
+apr 3/20:33:48.514 DEBUG2 : 		CpuRegListGet(Core 0, SP_Proc -> 18) = 0x0 (0)
+apr 3/20:33:50.313 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0x0, 512 bytes [by 0] = [ 00 00 02 20 91 38 00 00 ... ])
+apr 3/20:33:50.332 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0x3200, 512 bytes [by 0] = [ 61 1c 51 f0 81 51 08 70 ... ])
+apr 3/20:33:50.395 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0x3400, 512 bytes [by 0] = [ 01 68 51 f4 00 31 01 60 ... ])
+apr 3/20:33:50.588 DEBUG2 : 		CpuRegListGet(Core 0, CTRL_PRI -> 20) = 0x4000000 (67108864)
+apr 3/20:33:56.948 DEBUG2 : 		PlDriver::Go(core 0): mIsExecuting[0] = true
+apr 3/20:33:56.948 DEBUG2 : 		-> LowLevelGo(core 0)
+apr 3/20:33:56.948 DEBUG2 : 		CpuRegListGet(Core 0, PC ->15) = 0x34b0 (13488)
+apr 3/20:33:56.949 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0x34b0, 2 bytes [by 2] = [ 10 b5 ])
+apr 3/20:33:56.949 DEBUG2 : 		<Call to _ExecDeviceExecutionStarted: macro undefined
+apr 3/20:33:56.950 DEBUG2 : 		<Call to execUserExecutionStarted: macro undefined
+apr 3/20:33:56.955 DEBUG2 : 		  LowLevelGo(core 0) [multi = false], CpuStatus(): Core 0: CpuStatus(status = <0x1: CPU_STATUS_MPOWER>) = 0
+apr 3/20:33:56.956 DEBUG2 : 		Core 0:   LowLevelGo(core 0) [multi = false], CpuGo()
+apr 3/20:35:20.162 DEBUG2 : 		LowLevelStop(0): mStoppedByLowLevelStop[0] = true
+apr 3/20:35:20.168 DEBUG2 : 		LowLevelGo(core 0): Stop requested by stop flag
+apr 3/20:35:20.168 DEBUG2 : 		Core 0: LowLevelGo(core 0) [multi = false]: ISigEmu::CpuStop()
+apr 3/20:35:20.170 DEBUG2 : 		-> WaitForCpuToStop(core 0)
+apr 3/20:35:20.215 DEBUG2 : 		LowLevelGo(core 0): Core 0: CpuStatus(status = <0x1: CPU_STATUS_MPOWER>) = 0
+apr 3/20:35:20.215 DEBUG2 : 		<- WaitForCpuToStop(core 0)
+apr 3/20:35:20.215 DEBUG2 : 		LowLevelGo(core 0): WaitForCpuToStop(0) returned waitRes = 0
+apr 3/20:35:20.215 DEBUG2 : 		LowLevelGo(core 0): Setting single mIsExecuting[0] = false [multi == false]
+apr 3/20:35:20.215 DEBUG2 : 		LowLevelGo(core 0): CPU core 0 is now stopped, after 5198 polls in 83.184s
+apr 3/20:35:20.215 DEBUG2 : 		<Call to _ExecDeviceExecutionStopped: macro undefined
+apr 3/20:35:20.215 DEBUG2 : 		<Call to execUserExecutionStopped: macro undefined
+apr 3/20:35:20.215 DEBUG2 : 		CpuRegListGet(Core 0, PC -> 15) = 0x1672 (5746)
+apr 3/20:35:20.217 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0x1672, 2 bytes [by 2] = [ 54 f4 ])
+apr 3/20:35:20.223 DEBUG2 : 		LowLevelGo(core 0): Stopped at breakpoint
+apr 3/20:35:20.223 DEBUG2 : 		<- LowLevelGo(core 0)
+apr 3/20:35:20.223 DEBUG2 : 		PlDriver::Go(core 0): goStatus = 1
+apr 3/20:35:20.231 DEBUG2 : 		ISigPcSampler::SampleRegister(SIGAPIARM_SAMPLE_7M_CYCLE) = 0x54bc7bb9
+apr 3/20:35:20.246 DEBUG2 : 		CpuRegListGet(Core 0, LR -> 14) = 0x1183 (4483)
+apr 3/20:35:20.246 DEBUG2 : 		CpuRegListGet(Core 0, XPSR -> 16) = 0x41000000 (1090519040)
+apr 3/20:35:20.246 DEBUG2 : 		CpuRegListGet(Core 0, SP_Main -> 17) = 0x2001ffb0 (537001904)
+apr 3/20:35:20.246 DEBUG2 : 		CpuRegListGet(Core 0, SP_Proc -> 18) = 0x0 (0)
+apr 3/20:35:20.264 DEBUG2 : 		-> AboutToStopSession()
+apr 3/20:35:20.578 DEBUG2 : 		<- AboutToStopSession()
+apr 3/20:35:20.578 DEBUG2 : 		<Call to _ExecDeviceExit: macro undefined
+apr 3/20:35:20.578 DEBUG2 : 		<Call to execUserExit: macro undefined
+apr 3/20:35:20.591 DEBUG2 : 		-> PrepareStopSession()
+apr 3/20:35:20.591 DEBUG2 : 		<- PrepareStopSession()
+apr 3/20:35:20.592 DEBUG2 : 		ClearCodeBreak(<9:0xf000000000000000>, 1 units)
+apr 3/20:35:20.600 DEBUG2 : 		StopGui()
+apr 3/20:35:20.625 DEBUG2 : 		-> StopSession()
+apr 3/20:35:20.631 DEBUG2 : 		-> TerminateHardware()
+apr 3/20:35:20.631 DEBUG2 : 		  ISigEmu::ReleaseInterface(pcSampler)
+apr 3/20:35:20.631 DEBUG2 : 		  ISigEmu::ReleaseInterface(sigWpt)
+apr 3/20:35:20.631 DEBUG2 : 		  ISigEmu::ReleaseInterface(sigVect)
+apr 3/20:35:20.631 DEBUG2 : 		  ISigEmu::IceTerm()
+apr 3/20:35:20.645 DEBUG2 : 		Core 0: sigEmu->LinkAttach(SigProbe)
+apr 3/20:35:20.645 DEBUG2 : 		  ISigApi::ReleaseInstance(sigEmu)
+apr 3/20:35:20.645 DEBUG2 : 		  SigAPITerm()
+apr 3/20:35:20.646 DEBUG2 : 		<- TerminateHardware()
+apr 3/20:35:20.646 DEBUG2 : 		<- StopSession()
+apr 3/20:35:20.646 DEBUG2 : 		-> ~TdJetDriver()
+apr 3/20:35:20.646 DEBUG2 : 		-> TerminateHardware()
+apr 3/20:35:20.646 DEBUG2 : 		<- TerminateHardware()

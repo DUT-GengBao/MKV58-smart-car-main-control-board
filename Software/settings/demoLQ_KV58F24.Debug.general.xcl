@@ -1,0 +1,15 @@
+"D:\software\IAR\arm\bin\armproc.dll" 
+
+"D:\software\IAR\arm\bin\armJET.dll" 
+
+"D:\SmartCar\MCU2\debug\demoLQ_KV58F24.out" 
+
+--plugin="D:\software\IAR\arm\bin\armbat.dll" 
+
+--device_macro="D:\software\IAR\arm\config\debugger\NXP\KV5x.dmac" 
+
+--flash_loader="D:\software\IAR\arm\config\flashloader\NXP\FlashKV5xF1M0.board" 
+
+
+
+
